@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "Debug", 
+        "type": "cppdbg", 
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false, 
+        "cwd": "${fileDirname}", 
+        "environment": [], 
+        "externalConsole": true,
+        "internalConsoleOptions": "neverOpen",
+        "MIMode": "gdb", 
+        "miDebuggerPath": "X:\\VsCode\\develop\\mingw64\\bin\\gdb.exe", 
+        "preLaunchTask": "build" 
+    }]
+}

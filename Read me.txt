@@ -1,0 +1,97 @@
+#####################################################
+#####################################################
+# C++ Project
+
+This project implements a method to find the shortest path between two metro stations using dijkstra
+
+#####################################################
+#####################################################
+## Getting Started
+
+This project can be started in the windows environment. I have not tried it in the linux system ！！！！！
+
+Open the project in VsCode,
+
+Configure launch.json and task.json files
+
+launch.json :
+{
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "Debug", 
+        "type": "cppdbg", 
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false, 
+        "cwd": "${fileDirname}", 
+        "environment": [], 
+        "externalConsole": true,
+        "internalConsoleOptions": "neverOpen",
+        "MIMode": "gdb", 
+        "miDebuggerPath": "X:\\VsCode\\develop\\mingw64\\bin\\gdb.exe",   //Change to the path where your gdb.exe is located
+        "preLaunchTask": "build" 
+    }]
+}
+
+
+
+task.json :
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${fileDirname}\\*.cpp",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-pedantic",
+                "-pedantic-errors",
+                "-O3",
+                "-std=c++11"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        }
+    ]
+}
+
+
+#####################################################
+#####################################################
+Run the project:
+
+Select the station.cpp file and click Run, or use Ctrl + shift + D，and then F5
+Or I also provide a station.exe file to quickly start the project
+
+In the terminal, we choose whether to use big data by entering yes and no, 
+and whether to use the name as the input parameter or the ID as the input parameter.
+
+#####################################################
+#####################################################
+Attention :
+If you want to run on linux remove "#include <windows.h>" , "SetConsoleOutputCP(CP_UTF8);","SetConsoleCP(CP_UTF8);"
+whitch in the line 6,10,11 of the Station.cpp
+
+#####################################################
+#####################################################
+
+Authors:
+
+Peilin LI
